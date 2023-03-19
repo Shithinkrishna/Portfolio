@@ -15,13 +15,15 @@
         <div class="container">
             <nav>
                 <img src="images/">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contacts</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Ui/Ux designer</p>
@@ -191,6 +193,18 @@
             }
             event.currentTarget.classList.add("active-link")
             document.getElementById(tabName).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+
+        let sidemenu= document.getElementById("sidemenu");
+        
+        function openmenu(){
+            sidemenu.style.right= "0"
+        }
+        function closemenu(){
+            sidemenu.style.right= "-200px"
         }
     </script>
 </body>
